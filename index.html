@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Curuba - Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+    background-color: rgb(80, 63, 53); /* Brown */
+    color: rgb(255, 255, 255); /* White */
+    padding: 1em 0;
+    text-align: center;
+}
+
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .hero {
+            background-color: #ffcc00;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .section {
+            padding: 2em;
+            margin: 1em auto;
+            max-width: 1200px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+
+        .menu-item {
+            width: 300px;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .testimonials {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .testimonials p {
+            font-style: italic;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 1em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #cc0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Curuba</h1>
+        <p>Your destination for authentic Somali cuisine</p>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Hotel Curuba</h2>
+        <p>Experience the rich flavors of Somali culture right in the heart of Eastleigh, Nairobi.</p>
+    </section>
+
+    <section class="section">
+        <h2>Our Menu Highlights</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <img src=".//somali rice.png" alt="Dish 1">
+                <h3>Biryani</h3>
+                <p>Aromatic rice dish with tender meat and spices.</p>
+            </div>
+            <div class="menu-item">
+                <img src=".//goat meat.png" alt="Dish 2">
+                <h3>Grilled Meat</h3>
+                <p>Juicy, perfectly grilled cuts of goat and beef.</p>
+            </div>
+            <div class="menu-item">
+                <img src=".//somali tea.png" alt="Dish 3">
+                <h3>Somali Tea</h3>
+                <p>Traditional spiced tea to complement every meal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <p>"The best Somali food in Nairobi! The flavors are unmatched."</p>
+        <p>"Hotel Curuba is my go-to spot for a hearty meal. Highly recommended!"</p>
+    </section>
+
+    <section class="section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hotel Curuba. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
