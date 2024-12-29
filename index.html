@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Curuba - Welcome</title>
+    <title>Curuba Hotel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,6 +39,7 @@
         .navbar ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         .navbar ul li {
@@ -58,6 +60,17 @@
         .content {
             margin-left: 220px; /* Make space for the vertical navbar */
             padding: 20px;
+            overflow: hidden;
+        }
+
+        section {
+            width: 100%;
+            padding: 2em 0;
+            margin: 1em auto;
+            max-width: 1200px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         /* Hero Section */
@@ -110,14 +123,6 @@
         }
 
         /* Menu Section */
-        .section {
-            padding: 2em;
-            margin: 1em auto;
-            max-width: 1200px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
         .menu {
             display: flex;
             flex-wrap: wrap;
@@ -157,7 +162,8 @@
             gap: 1em;
         }
 
-        .contact-form input, .contact-form textarea {
+        .contact-form input,
+        .contact-form textarea {
             padding: 1em;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -176,6 +182,27 @@
 
         .contact-form button:hover {
             background-color: #cc0000;
+        }
+
+        /* Call Us Section */
+        .call-us {
+            background-color: #333;
+            color: white;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .call-us a {
+            color: #ffcc00;
+            font-size: 1.5em;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .call-us a:hover {
+            color: #fff;
         }
 
         /* Footer Section */
@@ -227,81 +254,84 @@
         }
     </style>
 </head>
+
 <body>
+
     <header>
-        <h1>Curuba Hotel</h1>
-        <p>Your destination for authentic Somali cuisine</p>
+        <h1>Welcome to Curuba Hotel</h1>
     </header>
 
-    <nav class="navbar">
+    <div class="navbar">
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#menu">Menu</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#map">Find Us</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#call-us">Call Us</a></li>
         </ul>
-    </nav>
+    </div>
 
-    <section id="hero">
-        <h2>Welcome to Curuba Hotel</h2>
-        <p>Experience the rich flavors of authentic Somali cuisine, right in the heart of Eastleigh, Nairobi. Indulge in traditional dishes crafted with care, perfect for family gatherings, celebrations, and everyday moments.</p>
-        <a href="#menu">Explore Our Menu</a>
-    </section>
+    <div class="content">
+        <section id="hero">
+            <h2>Experience the Best Somali Cuisine</h2>
+            <p>Enjoy traditional Somali dishes prepared with the finest ingredients, served in a cozy and welcoming atmosphere. Join us for an unforgettable culinary journey.</p>
+            <a href="#menu">Explore Our Menu</a>
+        </section>
 
-    <section id="menu" class="section">
-        <h2>Our Menu Highlights</h2>
-        <div class="menu">
-            <div class="menu-item">
-                <img src="./biryani.jpg" alt="Biryani"> <!-- Replace with actual image -->
-                <h3>Biryani</h3>
-                <p>Aromatic rice dish with tender meat and spices.</p>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="./somali rice.png" alt="Dish 1">
+                    <h3>Biryani 1</h3>
+                    <p>A delicious Somali dish made with the finest ingredients.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="./goat meatt.jpeg" alt="Dish 2">
+                    <h3>Grilled Meat</h3>
+                    <p>A flavorful meal that will take you straight to Somalia.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="./somali tea.jpeg" alt="Dish 3">
+                    <h3>Somali tea </h3>
+                    <p>Experience the rich flavors of Somali cuisine with this dish.</p>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="./grilled-meat.jpg" alt="Grilled Meat"> <!-- Replace with actual image -->
-                <h3>Grilled Meat</h3>
-                <p>Juicy, perfectly grilled cuts of goat and beef.</p>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>What Our Guests Say</h2>
+            <p>"The food was amazing, and the service was exceptional. A true taste of Somali culture!"</p>
+            <p>- Ahmed, Nairobi</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
             </div>
-            <div class="menu-item">
-                <img src="./somali-tea.jpg" alt="Somali Tea"> <!-- Replace with actual image -->
-                <h3>Somali Tea</h3>
-                <p>Traditional spiced tea to complement every meal.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="testimonials" class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <p>"The best Somali food in Nairobi! The flavors are unmatched."</p>
-        <p>"Curuba Hotel is my go-to spot for a hearty meal. Highly recommended!"</p>
-    </section>
-
-    <section id="map" class="section">
-        <h2>Find Us</h2>
-        <p>Visit us at Curuba Hotel, located in the heart of Eastleigh, Nairobi.</p>
-        <div style="overflow:hidden;position:relative;height:400px;width:100%;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.825082589686!2d36.85017667496563!3d-1.278488098709348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1753c4b9ced5%3A0xf3dadfccffdc7093!2sHotel%20Curuba!5e0!3m2!1sen!2ske!4v1735460425433!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <!-- Call Us Section -->
+        <section id="call-us" class="call-us">
+            <h2>Have Any Questions? Call Us Now!</h2>
+            <p>If you need any assistance, feel free to contact us directly. We're happy to help.</p>
+            <a href="tel:+254726970247">Call Us: +254 726970247</a>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Curuba Hotel. All rights reserved.</p>
-        <p><a href="mailto:info@curubahotel.com">Email us</a> | <a href="tel:+254726970247">Call us</a></p>
+        <p>&copy; 2024 Curuba Hotel | All Rights Reserved</p>
+        <p><a href="mailto:info@curubahotel.com">info@curubahotel.com</a></p>
     </footer>
+
 </body>
+
 </html>
+
 
 
 
