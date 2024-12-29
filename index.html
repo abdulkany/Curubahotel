@@ -23,37 +23,48 @@
             z-index: 1000;
         }
 
-        nav {
-            background-color: #333;
-            color: #fff;
-            padding: 0.5em 0;
-            position: sticky;
-            top: 0;
-            z-index: 1001;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
+.navbar {
+    width: 200px;
+    background-color: #333;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
 
-        nav ul li {
-            margin: 0 1em;
-        }
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-            transition: color 0.3s;
-        }
+.navbar ul li {
+    padding: 15px;
+    text-align: center;
+}
 
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+}
+
+.content {
+    margin-left: 220px; /* Make space for the vertical navbar */
+    padding: 20px;
+}
+
 
         #hero {
             position: relative; /* For the overlay */
@@ -183,6 +194,7 @@
     </nav>
 
     <section id="hero">
+        <br><br><br><br>
         <h2>Welcome to Curuba Hotel</h2>
         <p>Experience the rich flavors of Somali culture right in the heart of Eastleigh, Nairobi.</p>
     </section>
