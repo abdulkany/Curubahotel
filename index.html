@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curuba Hotel</title>
+    <title>Hotel Curuba - Welcome</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,7 +11,6 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            box-sizing: border-box;
         }
 
         header {
@@ -25,104 +23,84 @@
             z-index: 1000;
         }
 
-        .navbar {
-            width: 200px;
+        nav {
             background-color: #333;
-            height: 100vh;
-            position: fixed;
+            color: #fff;
+            padding: 0.5em 0;
+            position: sticky;
             top: 0;
-            left: 0;
-            padding-top: 20px;
-            transition: width 0.3s ease;
+            z-index: 1001;
         }
 
-        .navbar ul {
-            list-style-type: none;
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
             padding: 0;
             margin: 0;
         }
 
-        .navbar ul li {
-            padding: 15px;
-            text-align: center;
+        nav ul li {
+            margin: 0 1em;
         }
 
-        .navbar ul li a {
-            color: white;
+        nav ul li a {
+            color: #fff;
             text-decoration: none;
-            display: block;
+            font-size: 1em;
+            transition: color 0.3s;
         }
 
-        .navbar ul li a:hover {
-            background-color: #575757;
+        nav ul li a:hover {
+            color: #ffcc00;
         }
 
-        .content {
-            margin-left: 220px; /* Make space for the vertical navbar */
-            padding: 20px;
-            overflow: hidden;
-        }
-
-        section {
-            width: 100%;
-            padding: 2em 0;
-            margin: 1em auto;
-            max-width: 1200px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        /* Hero Section */
         #hero {
-            position: relative;
+            position: relative; /* For the overlay */
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background-image: url('./cruba image.jpeg'); /* Replace with actual image URL */
+
             background-size: cover;
             background-position: center;
             color: white;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
-            background-attachment: fixed;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
-        #hero h2 {
-            font-size: 3em;
-            font-weight: bold;
-            color: #FFCC00;
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        #hero h1, #hero p {
+            position: relative;
+            z-index: 2;
             margin: 0;
         }
 
-        #hero p {
-            font-size: 1.5em;
-            font-weight: lighter;
-            color: #fff;
-            margin-top: 20px;
-            max-width: 800px;
-            line-height: 1.6;
+#hero h2, #hero p {
+    text-align: center;
+            padding: 1em 0;
+            background-color:black;
+            color: yellow
+}
+        .section {
+            padding: 2em;
+            margin: 1em auto;
+            max-width: 1200px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        #hero a {
-            background-color: #FFCC00;
-            color: #333;
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            margin-top: 30px;
-            transition: background-color 0.3s ease;
-        }
-
-        #hero a:hover {
-            background-color: #e6b800;
-        }
-
-        /* Menu Section */
         .menu {
             display: flex;
             flex-wrap: wrap;
@@ -143,7 +121,6 @@
             border-radius: 5px;
         }
 
-        /* Testimonials Section */
         .testimonials {
             background-color: #ff0000;
             color: #fff;
@@ -155,15 +132,13 @@
             font-style: italic;
         }
 
-        /* Contact Form Section */
         .contact-form {
             display: flex;
             flex-direction: column;
             gap: 1em;
         }
 
-        .contact-form input,
-        .contact-form textarea {
+        .contact-form input, .contact-form textarea {
             padding: 1em;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -184,28 +159,6 @@
             background-color: #cc0000;
         }
 
-        /* Call Us Section */
-        .call-us {
-            background-color: #333;
-            color: white;
-            padding: 2em;
-            text-align: center;
-        }
-
-        .call-us a {
-            color: #ffcc00;
-            font-size: 1.5em;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .call-us a:hover {
-            color: #fff;
-        }
-
-        /* Footer Section */
         footer {
             text-align: center;
             padding: 1em 0;
@@ -217,64 +170,36 @@
             color: #ffcc00;
             text-decoration: none;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .navbar {
-                width: 100%;
-                position: relative;
-            }
-
-            .navbar ul {
-                display: flex;
-                justify-content: space-around;
-                padding: 0;
-            }
-
-            .content {
-                margin-left: 0;
-                padding: 10px;
-            }
-
-            .menu-item {
-                width: 100%;
-            }
-
-            #hero h2 {
-                font-size: 2em;
-            }
-
-            #hero p {
-                font-size: 1.2em;
-            }
-
-            #hero a {
-                padding: 10px 20px;
-            }
-        }
     </style>
 </head>
-
 <body>
-
     <header>
-        <h1>Welcome to Curuba Hotel</h1>
+        <h1>Hotel Curuba</h1>
+        <p>Your destination for authentic Somali cuisine</p>
     </header>
 
-    <div class="navbar">
+    <nav>
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#menu">Menu</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#map">Find Us</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#call-us">Call Us</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="content">
-        <section id="hero">
-            <h2>Experience the Best Somali Cuisine</h2>
-            <div class="menu">
+    <section id="hero">
+        <div>
+            <img src="./cruba image.jpeg" alt="">
+        </div>
+        <h2>Welcome to Hotel Curuba</h2>
+        <p>Experience the rich flavors of Somali culture right in the heart of Eastleigh, Nairobi.</p>
+    
+    </section>
+
+    <section id="menu" class="section">
+        <h2>Our Menu Highlights</h2>
+        <div class="menu">
             <div class="menu-item">
                 <img src="./somali rice.png" alt="Dish 1">
                 <h3>Biryani</h3>
@@ -291,46 +216,43 @@
                 <p>Traditional spiced tea to complement every meal.</p>
             </div>
         </div>
-        </section>
+    </section>
 
-        <section id="testimonials" class="testimonials">
-            <h2>What Our Guests Say</h2>
-            <p>"The food was amazing, and the service was exceptional. A true taste of Somali culture!"</p>
-            <p>- Ahmed, Nairobi</p>
-        </section>
- <section id="map" class="section">
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <p>"The best Somali food in Nairobi! The flavors are unmatched."</p>
+        <p>"Hotel Curuba is my go-to spot for a hearty meal. Highly recommended!"</p>
+    </section>
+
+    
+    </section>
+    <section id="map" class="section">
         <h2>Find Us</h2>
         <p>Visit us at Curuba Hotel, located in the heart of Eastleigh, Nairobi.</p>
         <div style="overflow:hidden;position:relative;height:400px;width:100%;">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.825082589686!2d36.85017667496563!3d-1.278488098709348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1753c4b9ced5%3A0xf3dadfccffdc7093!2sHotel%20Curuba!5e0!3m2!1sen!2ske!4v1735460425433!5m2!1sen!2ske" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </div>
-        </section>
-
-        <!-- Call Us Section -->
-        <section id="call-us" class="call-us">
-            <h2>Have Any Questions? Call Us Now!</h2>
-            <p>If you need any assistance, feel free to contact us directly. We're happy to help.</p>
-            <a href="tel:+254726970247">Call Us: +254 726970247</a>
-        </section>
-    </div>
-
+    <section id="call-us" class="call-us">
+        <h2>Have Any Questions? Call Us Now!</h2>
+        <p>If you need any assistance, feel free to contact us directly. We're happy to help.</p>
+        <a href="tel:+254726970247">Call Us: +254 726970247</a>
+    </section>
+</div>
     <footer>
-        <p>&copy; 2024 Curuba Hotel | All Rights Reserved</p>
-        <p><a href="mailto:info@curubahotel.com">info@curubahotel.com</a></p>
+        <p>&copy; 2024 Hotel Curuba. All rights reserved. | <a href="#">Privacy Policy</a></p>
     </footer>
-
 </body>
-
 </html>
+
 
 
 
