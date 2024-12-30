@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Curuba - Welcome</title>
+    <title>Curuba Hotel - Welcome</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,14 +56,13 @@
         }
 
         #hero {
-            position: relative; /* For the overlay */
+            position: relative;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-
             background-size: cover;
             background-position: center;
             color: white;
@@ -81,18 +80,12 @@
             z-index: 1;
         }
 
-        #hero h1, #hero p {
+        #hero h2, #hero p {
             position: relative;
             z-index: 2;
             margin: 0;
         }
 
-#hero h2, #hero p {
-    text-align: center;
-            padding: 1em 0;
-            background-color:black;
-            color: yellow
-}
         .section {
             padding: 2em;
             margin: 1em auto;
@@ -102,18 +95,18 @@
         }
 
         .menu {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1em;
             justify-content: center;
         }
 
         .menu-item {
-            width: 300px;
             padding: 1em;
             border: 1px solid #ddd;
             border-radius: 5px;
             text-align: center;
+            background-color: #fff;
         }
 
         .menu-item img {
@@ -170,11 +163,39 @@
             color: #ffcc00;
             text-decoration: none;
         }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+
+            #hero h2, #hero p {
+                font-size: 1.5em;
+            }
+
+            .menu {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li a {
+                font-size: 0.9em;
+            }
+
+            #hero h2, #hero p {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Hotel Curuba</h1>
+        <h1>Curuba Hotel</h1>
         <p>Your destination for authentic Somali cuisine</p>
     </header>
 
@@ -192,7 +213,7 @@
         <div>
             <img src="./cruba image.jpeg" alt="">
         </div>
-        <h2>Welcome to Hotel Curuba</h2>
+        <h2>Welcome to Curuba Hotel</h2>
         <p>Experience the rich flavors of Somali culture right in the heart of Eastleigh, Nairobi.</p>
     
     </section>
@@ -221,7 +242,7 @@
     <section id="testimonials" class="testimonials">
         <h2>What Our Customers Say</h2>
         <p>"The best Somali food in Nairobi! The flavors are unmatched."</p>
-        <p>"Hotel Curuba is my go-to spot for a hearty meal. Highly recommended!"</p>
+        <p>"Curuba Hotel is my go-to spot for a hearty meal. Highly recommended!"</p>
     </section>
 
     
@@ -230,7 +251,7 @@
         <h2>Find Us</h2>
         <p>Visit us at Curuba Hotel, located in the heart of Eastleigh, Nairobi.</p>
         <div style="overflow:hidden;position:relative;height:400px;width:100%;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.825082589686!2d36.85017667496563!3d-1.278488098709348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1753c4b9ced5%3A0xf3dadfccffdc7093!2sHotel%20Curuba!5e0!3m2!1sen!2ske!4v1735490221406!5m2!1sen!2ske" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.825082589686!2d36.85017667496563!3d-1.278488098709348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1753c4b9ced5%3A0xf3dadfccffdc7093!2sHotel%20Curuba!5e0!3m2!1sen!2ske!4v1735460425433!5m2!1sen!2ske" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     <section id="contact" class="section">
         <h2>Contact Us</h2>
@@ -249,9 +270,11 @@
 </div>
     <footer>
         <p>&copy; 2024 Hotel Curuba. All rights reserved. | <a href="#">Privacy Policy</a></p>
-    </footer>
+    </footer> <!-- Your HTML structure remains the same -->
+    <!-- Add other sections like hero, testimonials, contact, etc., unchanged -->
 </body>
 </html>
+
 
 
 
