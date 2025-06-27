@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Curuba Hotel | Authentic Somali Cuisine in Nairobi</title>
 <style>
-  /* Reset & base */
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -24,7 +23,6 @@
   a:hover, a:focus {
     color: #e6b800;
   }
-
   header {
     background: #503f35;
     color: #fff;
@@ -48,7 +46,6 @@
     font-style: italic;
     opacity: 0.85;
   }
-
   nav {
     background: #222;
   }
@@ -73,8 +70,6 @@
   nav a:hover, nav a:focus {
     border-bottom-color: #ffcc00;
   }
-
-  /* Hero */
   #hero {
     position: relative;
     height: 90vh;
@@ -86,6 +81,7 @@
     color: #fff;
     padding: 0 1rem;
     overflow: hidden;
+    background: url('https://images.pexels.com/photos/2832385/pexels-photo-2832385.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920') no-repeat center center/cover;
   }
   #hero::before {
     content: "";
@@ -126,19 +122,6 @@
   #hero a.cta-button:hover, #hero a.cta-button:focus {
     background: #e6b800;
   }
-  #hero img.bg-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: -1;
-    filter: brightness(0.65);
-    will-change: transform;
-  }
-
-  /* Sections */
   section {
     max-width: 1200px;
     margin: 3rem auto;
@@ -153,8 +136,6 @@
     padding-bottom: 0.3rem;
     color: #503f35;
   }
-
-  /* Menu grid */
   .menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -191,8 +172,6 @@
     color: #666;
     font-weight: 400;
   }
-
-  /* Testimonials */
   .testimonials {
     background: #ff0000;
     color: white;
@@ -207,8 +186,6 @@
     margin: 0 auto 1rem;
     font-size: 1.3rem;
   }
-
-  /* Contact form */
   .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -252,8 +229,6 @@
   .contact-form button:focus {
     background: #cc0000;
   }
-
-  /* Find us */
   #map {
     margin-top: 4rem;
   }
@@ -264,8 +239,6 @@
     border-radius: 12px;
     box-shadow: 0 5px 15px rgb(0 0 0 / 0.15);
   }
-
-  /* Call us */
   #call-us {
     text-align: center;
     margin: 3rem 0;
@@ -287,8 +260,6 @@
   #call-us a:hover {
     color: #cc0000;
   }
-
-  /* Footer */
   footer {
     background: #222;
     color: #eee;
@@ -300,8 +271,6 @@
   footer a {
     color: #ffcc00;
   }
-
-  /* Responsive */
   @media (max-width: 768px) {
     #hero h2 {
       font-size: 2.5rem;
@@ -330,40 +299,27 @@
 
 <header>
   <h1>Curuba Hotel</h1>
-  <p>Your destination for authentic Somali cuisine</p>
+  <p>Authentic Somali Cuisine in Nairobi</p>
 </header>
 
-<nav>
+<nav role="navigation" aria-label="Main Navigation">
   <ul>
     <li><a href="#hero">Home</a></li>
     <li><a href="#menu">Menu</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#map">Find Us</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#call-us">Contact</a></li>
   </ul>
 </nav>
 
-<section id="hero" role="banner" aria-label="Welcome to Curuba Hotel">
-  <img
-    class="bg-img"
-    src="https://images.unsplash.com/photo-1555992336-cbf85d9a9d40?auto=format&fit=crop&w=1920&q=80"
-    srcset="
-      https://images.unsplash.com/photo-1555992336-cbf85d9a9d40?auto=format&fit=crop&w=480&q=70 480w,
-      https://images.unsplash.com/photo-1555992336-cbf85d9a9d40?auto=format&fit=crop&w=800&q=80 800w,
-      https://images.unsplash.com/photo-1555992336-cbf85d9a9d40?auto=format&fit=crop&w=1280&q=80 1280w,
-      https://images.unsplash.com/photo-1555992336-cbf85d9a9d40?auto=format&fit=crop&w=1920&q=80 1920w
-    "
-    sizes="100vw"
-    alt="Somali restaurant interior with warm ambiance"
-    loading="lazy"
-  />
-  <h2>Welcome to Curuba Hotel</h2>
-  <p>Experience the rich flavors of Somali culture right in the heart of Eastleigh, Nairobi.</p>
+<section id="hero" aria-label="Welcome to Curuba Hotel">
+  <h2>Experience the True Taste of Somalia</h2>
+  <p>Delicious meals crafted with tradition and love, right here in Nairobi.</p>
   <a href="#menu" class="cta-button">Explore Our Menu</a>
 </section>
 
-<section id="menu" aria-label="Menu Highlights">
-  <h2>Our Menu Highlights</h2>
+<section id="menu" aria-label="Somali Food Menu">
+  <h2>Our Menu</h2>
   <div class="menu">
 
     <article class="menu-item" tabindex="0">
@@ -371,58 +327,26 @@
         <source
           type="image/webp"
           srcset="
-            https://images.unsplash.com/photo-1604944099291-6b6eb9a4d8e1?auto=format&fit=crop&w=480&q=70&fm=webp 480w,
-            https://images.unsplash.com/photo-1604944099291-6b6eb9a4d8e1?auto=format&fit=crop&w=800&q=80&fm=webp 800w,
-            https://images.unsplash.com/photo-1604944099291-6b6eb9a4d8e1?auto=format&fit=crop&w=1280&q=80&fm=webp 1280w
+            https://images.pexels.com/photos/461198/pexels-photo-461198.webp?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/461198/pexels-photo-461198.webp?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
           "
         />
         <source
           srcset="
-            https://images.unsplash.com/photo-1604944099291-6b6eb9a4d8e1?auto=format&fit=crop&w=480&q=70 480w,
-            https://images.unsplash.com/photo-1604944099291-6b6eb9a4d8e1?auto=format&fit=crop&w=800&q=80 800w,
-            https://images.unsplash.com/photo-1604944099291-6b6eb9a4d8e1?auto=format&fit=crop&w=1280&q=80 1280w
+            https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
           "
         />
         <img
-          src="https://images.unsplash.com/photo-1604944099291-6b6eb9a4d8e1?auto=format&fit=crop&w=800&q=80"
-          alt="Aromatic Biryani rice dish with spices and meat"
-          loading="lazy"
-          width="400"
-          height="180"
-          decoding="async"
-        />
-      </picture>
-      <h3>Biryani</h3>
-      <p>Aromatic rice dish with tender meat and spices.</p>
-    </article>
-
-    <article class="menu-item" tabindex="0">
-      <picture>
-        <source
-          type="image/webp"
-          srcset="
-            https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=480&q=70&fm=webp 480w,
-            https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80&fm=webp 800w,
-            https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1280&q=80&fm=webp 1280w
-          "
-        />
-        <source
-          srcset="
-            https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=480&q=70 480w,
-            https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80 800w,
-            https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1280&q=80 1280w
-          "
-        />
-        <img
-          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+          src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&h=180&w=320"
           alt="Grilled meat skewers on a barbecue grill"
           loading="lazy"
-          width="400"
+          width="320"
           height="180"
           decoding="async"
         />
       </picture>
-      <h3>Grilled Meat Skewers</h3>
+      <h3>Grilled Meat Skewers (Suqaar)</h3>
       <p>Succulent grilled meat with traditional Somali spices.</p>
     </article>
 
@@ -431,29 +355,111 @@
         <source
           type="image/webp"
           srcset="
-            https://images.unsplash.com/photo-1568051243853-61e1733f36bb?auto=format&fit=crop&w=480&q=70&fm=webp 480w,
-            https://images.unsplash.com/photo-1568051243853-61e1733f36bb?auto=format&fit=crop&w=800&q=80&fm=webp 800w,
-            https://images.unsplash.com/photo-1568051243853-61e1733f36bb?auto=format&fit=crop&w=1280&q=80&fm=webp 1280w
+            https://images.pexels.com/photos/357743/pexels-photo-357743.webp?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/357743/pexels-photo-357743.webp?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
           "
         />
         <source
           srcset="
-            https://images.unsplash.com/photo-1568051243853-61e1733f36bb?auto=format&fit=crop&w=480&q=70 480w,
-            https://images.unsplash.com/photo-1568051243853-61e1733f36bb?auto=format&fit=crop&w=800&q=80 800w,
-            https://images.unsplash.com/photo-1568051243853-61e1733f36bb?auto=format&fit=crop&w=1280&q=80 1280w
+            https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
           "
         />
         <img
-          src="https://images.unsplash.com/photo-1568051243853-61e1733f36bb?auto=format&fit=crop&w=800&q=80"
+          src="https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&h=180&w=320"
           alt="Traditional Somali spiced tea with milk in a glass cup"
           loading="lazy"
-          width="400"
+          width="320"
           height="180"
           decoding="async"
         />
       </picture>
       <h3>Somali Tea</h3>
       <p>Sweet spiced tea brewed to perfection.</p>
+    </article>
+
+    <article class="menu-item" tabindex="0">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            https://images.pexels.com/photos/704569/pexels-photo-704569.webp?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/704569/pexels-photo-704569.webp?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
+          "
+        />
+        <source
+          srcset="
+            https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
+          "
+        />
+        <img
+          src="https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg?auto=compress&cs=tinysrgb&h=180&w=320"
+          alt="Sambuusa fried pastries on a plate"
+          loading="lazy"
+          width="320"
+          height="180"
+          decoding="async"
+        />
+      </picture>
+      <h3>Sambuusa</h3>
+      <p>Crispy fried pastry stuffed with spiced meat or vegetables.</p>
+    </article>
+
+    <article class="menu-item" tabindex="0">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            https://images.pexels.com/photos/1021057/pexels-photo-1021057.webp?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/1021057/pexels-photo-1021057.webp?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
+          "
+        />
+        <source
+          srcset="
+            https://images.pexels.com/photos/1021057/pexels-photo-1021057.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/1021057/pexels-photo-1021057.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
+          "
+        />
+        <img
+          src="https://images.pexels.com/photos/1021057/pexels-photo-1021057.jpeg?auto=compress&cs=tinysrgb&h=180&w=320"
+          alt="Canjeero Somali flatbread with side dishes"
+          loading="lazy"
+          width="320"
+          height="180"
+          decoding="async"
+        />
+      </picture>
+      <h3>Canjeero</h3>
+      <p>Soft sourdough flatbread served with honey or stew.</p>
+    </article>
+
+    <article class="menu-item" tabindex="0">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            https://images.pexels.com/photos/3298636/pexels-photo-3298636.webp?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/3298636/pexels-photo-3298636.webp?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
+          "
+        />
+        <source
+          srcset="
+            https://images.pexels.com/photos/3298636/pexels-photo-3298636.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=180&w=320 320w,
+            https://images.pexels.com/photos/3298636/pexels-photo-3298636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=360&w=640 640w
+          "
+        />
+        <img
+          src="https://images.pexels.com/photos/3298636/pexels-photo-3298636.jpeg?auto=compress&cs=tinysrgb&h=180&w=320"
+          alt="Muqmad dried meat chunks with sauce"
+          loading="lazy"
+          width="320"
+          height="180"
+          decoding="async"
+        />
+      </picture>
+      <h3>Muqmad</h3>
+      <p>Traditional dried and spiced meat chunks served with sauce.</p>
     </article>
 
   </div>
